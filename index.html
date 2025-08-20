@@ -1,76 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Hrishikesh Purandare | QA Automation Engineer Portfolio</title>
   <style>
-    body { font-family: Arial, sans-serif; background: #f5f5f5; color: #333; }
-    header { text-align: center; padding: 2rem 0; }
-    section { background: #fff; margin: 2rem auto; padding: 2rem; max-width: 800px; border-radius: 8px; box-shadow: 0 0 12px rgba(0,0,0,0.08); }
-    h1, h2 { color: #27408b; }
-    .skills-list, .projects-list, .exp-list, .cert-list { list-style: none; padding: 0; }
-    .skills-list li, .projects-list li, .exp-list li, .cert-list li { margin-bottom: 1em; }
-    .contact { text-align: center; margin-top: 2em; }
-    a { color: #27408b; text-decoration: none; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      color: #27408b;
+    }
+    header p {
+      margin: 0.5em 0;
+      font-size: 1em;
+    }
+    section {
+      background: #fff;
+      margin: 2rem auto;
+      padding: 2rem;
+      max-width: 900px;
+      border-radius: 8px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.08);
+    }
+    section h2 {
+      color: #27408b;
+      margin-top: 0;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 1em;
+    }
+    /* Skills Grid Styling */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+    .skills-grid div {
+      background: #f8f9fa;
+      padding: 1rem;
+      border-radius: 5px;
+      border-left: 4px solid #27408b;
+    }
+    /* Job/Project/Cert Styling */
+    .job, .project {
+      margin-bottom: 2rem;
+      padding: 1rem;
+      border-left: 3px solid #27408b;
+      background: #f8f9fa;
+      border-radius: 4px;
+    }
+    .job h3, .project h3 {
+      margin-top: 0;
+      color: #27408b;
+    }
+    /* Contact */
+    .contact {
+      text-align: center;
+      margin-top: 2em;
+    }
+    a {
+      color: #27408b;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    /* Responsive adjustments */
+    @media(max-width: 600px){
+      header h1 { font-size: 2em; }
+    }
   </style>
 </head>
 <body>
 
 <header>
   <h1>Hrishikesh Purandare</h1>
-  <p>QA Automation Engineer | Selenium & Python Expert | Remote Testing Specialist | 6+ Years in Agile/DevOps</p>
-  <p><a href="mailto:hrishikesh.purandarem@gmail.com">hrishikesh.purandarem@gmail.com</a> | Pune, India | <a href="https://www.linkedin.com/in/hrishikesh-purandare-qa" target="_blank">LinkedIn</a></p>
+  <p>QA Automation Engineer | Selenium & Python Expert | Remote Testing Specialist</p>
+  <p>6+ Years Experience | Open to Global Opportunities | Available for Remote Work</p>
+  <p>
+    📧 <a href="mailto:hrishikesh.purandarem@gmail.com">hrishikesh.purandarem@gmail.com</a> | 
+    📱 +91 8796973450 | 
+    🌐 <a href="https://www.linkedin.com/in/hrishikesh-purandare-qa" target="_blank">LinkedIn</a> | 
+    📍 Pune, India
+  </p>
 </header>
 
 <section>
   <h2>About Me</h2>
-  <p>Experienced QA Automation Engineer passionate about building robust test automation frameworks and ensuring high-quality software releases for global fintech, payments, and SaaS platforms. Open to international remote opportunities and relocation.</p>
+  <p>🌍 <strong>Experienced QA Automation Engineer</strong> with 6+ years delivering quality assurance across global payment systems, fintech platforms, and international banking solutions. Proven track record of building robust test automation frameworks that reduce execution time by 20% and achieve 95% regression coverage.</p>
+  <p>💼 <strong>International Experience:</strong> Successfully collaborated with distributed teams across multiple time zones, ensuring 24/7 system reliability for global markets. Expert in regulatory compliance testing including GDPR and international financial standards.</p>
+  <p>🚀 <strong>Currently seeking remote QA roles</strong> with global companies in fintech, payments, or SaaS. Available immediately and open to international relocation opportunities.</p>
 </section>
 
 <section>
   <h2>Skills</h2>
-  <ul class="skills-list">
-    <li>Selenium WebDriver, Playwright, TestNG, SHAFT Framework</li>
-    <li>Python, Java (Basic), HTML, XPath</li>
-    <li>API Testing: Postman, REST APIs, Swagger</li>
-    <li>Maven, Jenkins, Azure DevOps, Git, CI/CD</li>
-    <li>Agile & DevOps Practices, BDD, Cucumber, Gherkin</li>
-    <li>Remote Collaboration, Cross-timezone Coordination, International Compliance Testing</li>
-  </ul>
+  <div class="skills-grid">
+    <div>
+      <h3>🔧 Test Automation</h3>
+      <ul>
+        <li>Selenium WebDriver, Playwright, TestNG</li>
+        <li>SHAFT Framework, Page Object Model</li>
+        <li>Python, Java (Basic), JavaScript</li>
+      </ul>
+    </div>
+    <div>
+      <h3>🌐 API & Integration Testing</h3>
+      <ul>
+        <li>Postman, REST APIs, Swagger</li>
+        <li>JSON, XML, API Validation</li>
+        <li>Microservices Testing</li>
+      </ul>
+    </div>
+    <div>
+      <h3>⚙️ DevOps & CI/CD</h3>
+      <ul>
+        <li>Jenkins, GitHub Actions, Azure Pipelines</li>
+        <li>Maven, Git, Docker (Basic)</li>
+        <li>BDD, Cucumber, Gherkin</li>
+      </ul>
+    </div>
+    <div>
+      <h3>🤝 Remote Work Skills</h3>
+      <ul>
+        <li>Cross-timezone Collaboration</li>
+        <li>Distributed Team Management</li>
+        <li>International Compliance Testing</li>
+      </ul>
+    </div>
+  </div>
 </section>
 
 <section>
   <h2>Experience</h2>
-  <ul class="exp-list">
-    <li><strong>Test Analyst – Automation</strong>, Euronet Private Limited (Nov 2022 – Present)
-      <br>- Spearheaded test automation for global payment systems, reducing execution time by 20%.
-      <br>- Built scalable frameworks, achieving 95% regression coverage.
-      <br>- Integrated automation in CI/CD pipelines, accelerating global releases.
-    </li>
-    <li><strong>Senior Software Engineer</strong>, Maveric Systems Limited (Feb 2022 – Nov 2022)
-      <br>- Designed automated tests for real-time payments and mobile banking.
-      <br>- Improved execution speed and maintainability using SHAFT Framework.
-    </li>
-    <li><strong>Quality Assurance Engineer</strong>, HUDL India Pvt. Ltd (June 2019 – Jan 2022)
-      <br>- Functional and regression testing of sports video analytics platforms.
-      <br>- Led API validations ensuring backend integrity.
-    </li>
-  </ul>
+  <div class="job">
+    <h3>Test Analyst – Automation | Euronet Private Limited</h3>
+    <p><em>Nov 2022 – Present | Pune, India (Remote-Ready)</em></p>
+    <ul>
+      <li>🌐 <strong>Global Impact:</strong> Spearheaded test automation for international payment systems, ensuring 24/7 reliability across multiple markets and time zones</li>
+      <li>⚡ <strong>Performance:</strong> Reduced test execution time by 20% through advanced Selenium WebDriver, Python, and Playwright automation</li>
+      <li>📊 <strong>Coverage:</strong> Built scalable automation frameworks achieving 95% regression test coverage</li>
+      <li>🔧 <strong>CI/CD:</strong> Integrated automation into GitHub Actions pipelines, accelerating global release cycles</li>
+      <li>🎯 <strong>Quality:</strong> Improved early bug detection by 30% through comprehensive API testing with Postman</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <h3>Senior Software Engineer | Maveric Systems Limited</h3>
+    <p><em>Feb 2022 – Nov 2022 | Pune, India</em></p>
+    <ul>
+      <li>🏦 Designed automated test cases for real-time payments and mobile banking systems</li>
+      <li>🚀 Implemented SHAFT Framework, improving maintainability and execution speed by 25%</li>
+      <li>👥 Collaborated with international BAs and developers ensuring requirement traceability</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <h3>Quality Assurance Engineer | HUDL India Pvt. Ltd</h3>
+    <p><em>June 2019 – Jan 2022 | Pune, India</em></p>
+    <ul>
+      <li>🏆 Led functional and regression testing of sports video analytics platforms</li>
+      <li>🔍 Conducted REST API validations using Postman and Swagger</li>
+      <li>📝 Authored reusable BDD test cases supporting faster sprint delivery</li>
+      <li>🔄 Successfully transitioned teams from Waterfall to Agile methodologies</li>
+    </ul>
+  </div>
 </section>
 
 <section>
-  <h2>Projects</h2>
-  <ul class="projects-list">
-    <li><strong>Real-Time Payment Hub Testing</strong> – Delivered 95% coverage, 20% less defect leakage, enabled end-to-end test lifecycle and automation with nightly builds.</li>
-    <li><strong>Mobile Banking Automation Suite</strong> – Led framework migration improving maintainability and reducing test execution time by 25%.</li>
-    <li><strong>Sports Analytics Testing</strong> – Developed reusable test cases for BDD, supported faster sprint delivery.</li>
-  </ul>
+  <h2>Featured Projects</h2>
+  <div class="project">
+    <h3>🏦 Real-Time Payment Hub Testing</h3>
+    <p><strong>Role:</strong> Lead QA Automation Engineer</p>
+    <p><strong>Impact:</strong> Delivered 95% test coverage, reduced defect leakage by 20%, enabled 24/7 global operations</p>
+    <p><strong>Technologies:</strong> Selenium, Python, Jenkins, Payment APIs</p>
+  </div>
+
+  <div class="project">
+    <h3>📱 Mobile Banking Automation Suite</h3>
+    <p><strong>Role:</strong> Automation Architect</p>
+    <p><strong>Impact:</strong> Reduced test execution time by 25%, improved framework maintainability</p>
+    <p><strong>Technologies:</strong> SHAFT Framework, TestNG, Mobile Testing</p>
+  </div>
+
+  <div class="project">
+    <h3>⚽ Sports Analytics Platform Testing</h3>
+    <p><strong>Role:</strong> QA Engineer</p>
+    <p><strong>Impact:</strong> Enabled faster sprint delivery through BDD implementation</p>
+    <p><strong>Technologies:</strong> Cucumber, Gherkin, API Testing, Agile</p>
+  </div>
 </section>
 
 <section>
   <h2>Certifications & Awards</h2>
-  <ul class="cert-list">
+  <ul>
     <li>Selenium WebDriver – Automation Certified</li>
     <li>Python for Test Automation – Completion Certificate</li>
     <li>Agile Methodologies – Trained</li>
