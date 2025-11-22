@@ -271,6 +271,49 @@
             border-radius: 3px;
             font-weight: bold;
         }
+
+        /* Projects preview section styles */
+        .projects-preview {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .projects-preview .project {
+            background: linear-gradient(135deg, #f8f9fa 0%, #f1f3f5 100%);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid #27408b;
+        }
+
+        .projects-preview .project a {
+            color: #27408b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .projects-preview .project p {
+            color: #555;
+            margin-top: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .view-all {
+            display: inline-block;
+            margin-top: 1rem;
+            background: #27408b;
+            color: #fff;
+            padding: 0.6rem 1rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .view-all:hover {
+            background: #1f3566;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
@@ -283,8 +326,9 @@
             <p class="contact-info">
                 📧 <a href="mailto:hrishikesh.purandarem@gmail.com">hrishikesh.purandarem@gmail.com</a> | 
                 📱 +91 8796973450 | 
-                🌐 <a href="https://www.linkedin.com/in/hrishikesh-purandare-qa" target="_blank">LinkedIn</a> | 
-                📍 Pune, India
+                🌐 <a href="https://www.linkedin.com/in/hrishikesh-purandare-qa" target="_blank" rel="noopener">LinkedIn</a> | 
+                <a href="/projects.html" style="color:#87ceeb; text-decoration:none; font-weight:600;" target="_self">Open Source / Projects</a>
+                | 📍 Pune, India
             </p>
         </header>
 
@@ -417,6 +461,36 @@
             </div>
         </section>
 
+        <!-- New Open Source / GitHub Projects preview section -->
+        <section>
+            <h2>Open Source / GitHub Projects (Preview)</h2>
+            <p class="about-text">A quick preview of selected public repositories. Click a project to open its GitHub repository. For the full list and details, click "View all projects".</p>
+
+            <div class="projects-preview">
+                <div class="project">
+                    <h3><a href="https://github.com/HrishiPurandare/pytest-api-automation-framework" target="_blank" rel="noopener">pytest-api-automation-framework</a></h3>
+                    <p>API automation framework using pytest: reusable fixtures, parametrised tests, reporting and example REST API suites.</p>
+                </div>
+
+                <div class="project">
+                    <h3><a href="https://github.com/HrishiPurandare/playwright-ts-sdet-framework" target="_blank" rel="noopener">playwright-ts-sdet-framework</a></h3>
+                    <p>TypeScript Playwright SDET framework with cross-browser E2E tests, page-object examples and CI workflow templates.</p>
+                </div>
+
+                <div class="project">
+                    <h3><a href="https://github.com/HrishiPurandare/devops-test-automation-lab" target="_blank" rel="noopener">devops-test-automation-lab</a></h3>
+                    <p>Hands-on lab demonstrating CI/CD + test automation integration, infra-as-code experiments and pipeline examples.</p>
+                </div>
+
+                <div class="project">
+                    <h3><a href="https://github.com/HrishiPurandare/MobileAutomationShaft" target="_blank" rel="noopener">MobileAutomationShaft</a></h3>
+                    <p>Mobile automation framework built with Shaft: sample device setups, example suites and usage notes for mobile testing.</p>
+                </div>
+            </div>
+
+            <a class="view-all" href="/projects.html" target="_self">View all projects →</a>
+        </section>
+
         <section>
             <h2>Certifications & Awards</h2>
             <ul class="cert-list">
@@ -446,7 +520,7 @@
             <p>Ready to contribute to your global team with proven QA automation expertise!</p>
             <p>
                 📧 <a href="mailto:hrishikesh.purandarem@gmail.com">hrishikesh.purandarem@gmail.com</a><br>
-                🌐 <a href="https://www.linkedin.com/in/hrishikesh-purandare-qa" target="_blank">LinkedIn Profile</a><br>
+                🌐 <a href="https://www.linkedin.com/in/hrishikesh-purandare-qa" target="_blank" rel="noopener">LinkedIn Profile</a><br>
                 📱 +91 8796973450<br>
                 📍 Pune, India – Open to Global Remote Opportunities
             </p>
