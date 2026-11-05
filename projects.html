@@ -1,47 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Open Source / GitHub Projects - Hrishi Purandare</title>
-  <style>
-    *{margin:0;padding:0;box-sizing:border-box}
-    body{font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;min-height:100vh;background:linear-gradient(135deg,#667eea 0,#764ba2 100%);color:#fff;line-height:1.6}
-    .container{max-width:1000px;margin:3rem auto;background:rgba(255,255,255,0.03);padding:2rem;border-radius:8px}
-    h1{font-size:2rem;margin-bottom:0.5rem}
-    p.lead{opacity:0.95;margin-bottom:1rem}
-    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin-top:1rem}
-    .project{background:linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.02));padding:1rem;border-radius:6px;border-left:4px solid rgba(255,255,255,0.06)}
-    .project h3{font-size:1.05rem;margin-bottom:0.5rem}
-    .project a{color:#fff;text-decoration:none}
-    .project p{color:#e6e6e6;font-size:0.95rem}
-    .back{display:inline-block;margin-top:1.25rem;color:#fff;opacity:0.9;text-decoration:underline}
-    footer{margin-top:2rem;font-size:0.85rem;opacity:0.85}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Public Code | Hrishikesh Purandare</title>
+    <meta name="description" content="Public test automation repositories by Hrishikesh Purandare: Playwright, pytest, Docker and GitHub Actions.">
+    <meta property="og:title" content="Public Code | Hrishikesh Purandare">
+    <meta property="og:description" content="Public test automation repositories by Hrishikesh Purandare: Playwright, pytest, Docker and GitHub Actions.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hrishipurandare.github.io/">
+    <meta name="theme-color" content="#11161a">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2311161a'/%3E%3Cpath d='M9 16.5l5 5 9-11' fill='none' stroke='%233ddc97' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+    <script>
+      try { var t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+    </script>
+    <style>
+:root {
+  --bg: #f6f5f1; --surface: #ffffff; --ink: #14181c; --muted: #565d65; --line: #dfddd5;
+  --accent: #0a7a4d; --accent-soft: #e0f2e9; --before: #b4552d;
+  --panel: #11161a; --panel-line: #2a3238; --panel-ink: #e9edef; --panel-muted: #9aa5ad; --pass: #3ddc97;
+  --sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0e1215; --surface: #161b1f; --ink: #eaedef; --muted: #a0a9b0; --line: #2a3238;
+    --accent: #3ddc97; --accent-soft: #15302a; --before: #e88f64; --panel: #161b1f;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0e1215; --surface: #161b1f; --ink: #eaedef; --muted: #a0a9b0; --line: #2a3238;
+  --accent: #3ddc97; --accent-soft: #15302a; --before: #e88f64; --panel: #161b1f;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; margin: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 76px; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--ink); font: 400 1rem/1.65 var(--sans); }
+a { color: inherit; }
+ul { padding: 0; list-style: none; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 3px; }
+.wrap { width: min(1120px, 100% - 40px); margin-inline: auto; }
+.skip { position: absolute; left: -999px; top: 8px; background: var(--ink); color: var(--bg); padding: 8px 14px; border-radius: 6px; z-index: 20; }
+.skip:focus { left: 12px; }
+.mono { font-family: var(--mono); }
+
+/* Navigation */
+.nav { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+.nav .wrap { display: flex; align-items: center; gap: 28px; height: 60px; }
+.brand { font-weight: 600; text-decoration: none; margin-right: auto; white-space: nowrap; }
+.nav-links { display: flex; gap: 24px; }
+.nav-links a { color: var(--muted); font-size: .92rem; text-decoration: none; }
+.nav-links a:hover { color: var(--ink); }
+.theme { background: none; border: 1px solid var(--line); color: var(--ink); width: 36px; height: 36px; border-radius: 8px; cursor: pointer; display: grid; place-items: center; flex: none; }
+.theme:hover { border-color: var(--muted); }
+.theme svg { width: 17px; height: 17px; }
+
+/* Hero */
+.hero { padding: 72px 0 80px; }
+.hero .wrap { display: grid; grid-template-columns: 1.02fr 1fr; gap: 56px; align-items: center; }
+.eyebrow { font: 500 .82rem/1.5 var(--mono); color: var(--accent); margin-bottom: 18px; }
+h1 { font-size: clamp(2.5rem, 5.4vw, 4rem); line-height: 1.04; letter-spacing: -.03em; font-weight: 700; margin-bottom: 20px; }
+.lede { font-size: 1.16rem; line-height: 1.6; color: var(--muted); max-width: 34em; margin-bottom: 28px; }
+.lede strong { color: var(--ink); font-weight: 600; }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 26px; }
+.btn { display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border-radius: 8px; border: 1px solid var(--line); text-decoration: none; font-weight: 500; font-size: .95rem; transition: border-color .15s, transform .15s; }
+.btn:hover { border-color: var(--ink); transform: translateY(-1px); }
+.btn.primary { background: var(--ink); border-color: var(--ink); color: var(--bg); }
+.facts { display: flex; flex-wrap: wrap; gap: 6px 22px; color: var(--muted); font-size: .92rem; }
+
+/* Results panel: the page's signature element */
+.panel { background: var(--panel); color: var(--panel-ink); border: 1px solid var(--panel-line); border-radius: 12px; overflow: hidden; box-shadow: 0 24px 50px -28px rgba(17, 22, 26, .55); font-family: var(--mono); }
+.panel-head { display: flex; justify-content: space-between; gap: 12px; padding: 13px 18px; border-bottom: 1px solid var(--panel-line); color: var(--panel-muted); font-size: .78rem; }
+.result { display: grid; grid-template-columns: auto 1fr; gap: 2px 12px; padding: 13px 18px; border-bottom: 1px solid var(--panel-line); animation: rise .45s ease-out both; }
+.result:nth-child(2) { animation-delay: .08s; } .result:nth-child(3) { animation-delay: .2s; } .result:nth-child(4) { animation-delay: .32s; }
+.result:nth-child(5) { animation-delay: .44s; } .result:nth-child(6) { animation-delay: .56s; } .result:nth-child(7) { animation-delay: .68s; }
+.result .tick { grid-row: span 2; color: var(--pass); font-size: .95rem; line-height: 1.5; }
+.result .name { font-size: .78rem; color: var(--panel-muted); }
+.result .value { font-size: 1.02rem; font-weight: 500; }
+.panel-foot { padding: 12px 18px; color: var(--panel-muted); font-size: .76rem; animation: rise .45s .8s ease-out both; }
+@keyframes rise { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+/* Sections */
+section { padding: 72px 0; border-top: 1px solid var(--line); }
+h2 { font-size: clamp(1.7rem, 3vw, 2.2rem); line-height: 1.15; letter-spacing: -.02em; margin-bottom: 10px; }
+.section-note { color: var(--muted); max-width: 42em; margin-bottom: 36px; }
+h3 { font-size: 1.14rem; line-height: 1.35; letter-spacing: -.005em; }
+
+/* Selected work */
+.work { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 26px; display: flex; flex-direction: column; min-width: 0; }
+.card .role { font: 400 .8rem/1.5 var(--mono); color: var(--muted); margin: 6px 0 14px; }
+.card p { color: var(--muted); }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; padding-top: 18px; }
+.chips li { font: 400 .76rem/1.4 var(--mono); padding: 3px 8px; border: 1px solid var(--line); border-radius: 5px; color: var(--muted); }
+.bars { margin: 2px 0 18px; display: grid; gap: 7px; }
+.bar { display: grid; grid-template-columns: 58px 1fr; align-items: center; gap: 10px; font: 400 .78rem/1 var(--mono); color: var(--muted); }
+.bar i { display: block; height: 22px; border-radius: 4px; background: var(--before); min-width: 2px; position: relative; }
+.bar.after i { background: var(--accent); }
+.bar b { font-weight: 500; color: var(--ink); white-space: nowrap; }
+.track { display: flex; align-items: center; gap: 8px; min-width: 0; }
+
+/* Experience */
+.job { display: grid; grid-template-columns: 170px 1fr; gap: 28px; padding: 30px 0; border-top: 1px solid var(--line); }
+.job:first-of-type { border-top: 0; padding-top: 8px; }
+.when { font: 400 .82rem/1.6 var(--mono); color: var(--muted); }
+.org { color: var(--muted); margin: 2px 0 14px; }
+.job li, details li { position: relative; padding-left: 18px; margin-bottom: 8px; }
+.job li::before { content: ""; position: absolute; left: 2px; top: .68em; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+summary { cursor: pointer; color: var(--accent); font-weight: 500; font-size: .94rem; margin-top: 6px; width: fit-content; }
+details ul { margin-top: 12px; }
+
+/* Skills */
+.skills { display: grid; grid-template-columns: repeat(3, 1fr); gap: 34px 36px; }
+.skills h3 { font-size: 1rem; margin-bottom: 10px; padding-bottom: 8px; border-bottom: 2px solid var(--ink); }
+.skills li { padding: 4px 0; font-size: .95rem; color: var(--muted); }
+
+/* Repositories */
+.repos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.repo { text-decoration: none; transition: border-color .15s, transform .15s; }
+.repo:hover { border-color: var(--accent); transform: translateY(-2px); }
+.repo h3 { font: 500 .95rem/1.4 var(--mono); overflow-wrap: anywhere; margin-bottom: 10px; }
+.repo p { font-size: .95rem; margin-bottom: 16px; }
+.repo img { display: block; height: 20px; width: auto; align-self: flex-start; margin-top: auto; }
+.more { display: inline-block; margin-top: 22px; color: var(--accent); font-weight: 500; }
+
+/* Credentials */
+.creds { display: grid; grid-template-columns: 2fr 1fr; gap: 48px; }
+.cred-list li { padding: 11px 0; border-bottom: 1px solid var(--line); }
+.cred-list strong { font-weight: 600; }
+.cred-list span { color: var(--muted); }
+
+/* Contact */
+.contact { background: var(--panel); color: var(--panel-ink); border-top: 0; }
+.contact h2 { font-size: clamp(2rem, 4.4vw, 3rem); max-width: 16em; margin-bottom: 26px; }
+.contact-links { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(310px, 100%), 1fr)); gap: 18px 24px; font-family: var(--mono); font-size: .92rem; }
+.contact-links a { text-decoration-color: var(--pass); text-underline-offset: 4px; overflow-wrap: anywhere; }
+.contact-links small { display: block; color: var(--panel-muted); font-size: .76rem; }
+
+@media (max-width: 920px) {
+  .hero { padding: 48px 0 56px; }
+  .hero .wrap, .creds { grid-template-columns: 1fr; gap: 40px; }
+  .work, .repos { grid-template-columns: 1fr; }
+  .skills { grid-template-columns: repeat(2, 1fr); }
+  .nav-links { display: none; }
+  section { padding: 56px 0; }
+}
+@media (max-width: 620px) {
+  .skills { grid-template-columns: 1fr; }
+  .job { grid-template-columns: 1fr; gap: 6px; }
+  .card { padding: 20px; }
+  .btn { flex: 1 1 auto; justify-content: center; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+@media print {
+  .nav, .theme, .actions, summary { display: none; }
+  .contact { background: none; color: inherit; }
+  .result, .panel-foot { animation: none; }
+}
+</style>
 </head>
 <body>
-  <div class="container">
-    <h1>Open Source / GitHub Projects</h1>
-    <p class="lead">A curated list of public repositories and frameworks I've built or maintain. Click a project to open its GitHub repository.</p>
-
-    <div class="projects">
-      <div class="project">
-        <h3><a href="https://github.com/HrishiPurandare/playwright-ts-sdet-framework" target="_blank" rel="noopener">playwright-ts-sdet-framework</a></h3>
-        <p>Playwright and TypeScript UI and API tests across Chromium and Firefox, with GitHub Actions CI, traces, video on failure and HTML reporting.</p>
-      </div>
-
-      <div class="project">
-        <h3><a href="https://github.com/HrishiPurandare/pytest-api-automation-framework" target="_blank" rel="noopener">pytest-api-automation-framework</a></h3>
-        <p>REST API tests in pytest with a reusable API client and fixtures, a Dockerised Flask mock API, and GitHub Actions CI.</p>
-      </div>
-
-      <div class="project">
-        <h3><a href="https://github.com/HrishiPurandare/devops-test-automation-lab" target="_blank" rel="noopener">devops-test-automation-lab</a></h3>
-        <p>Docker and CI lab: separate Playwright and PyTest images, docker-compose orchestration and a multi-job GitHub Actions workflow.</p>
-      </div>
+<nav class="nav" aria-label="Main">
+    <div class="wrap">
+        <a class="brand" href="/">Hrishikesh Purandare</a>
+        <div class="nav-links"><a href="/">← Back to home</a></div>
+        <button class="theme" type="button" aria-label="Switch between light and dark theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg></button>
     </div>
-
-    <a class="back" href="/">← Back to home</a>
-  </div>
+</nav>
+<main>
+<section style="border-top:0">
+    <div class="wrap">
+        <h1 style="font-size:clamp(2.2rem,5vw,3.2rem)">Public code</h1>
+        <p class="section-note">Client work is private, so these repositories show how I structure tests. Each status badge is live from GitHub Actions.</p>
+        <div class="repos">
+        <a class="card repo" href="https://github.com/HrishiPurandare/playwright-ts-sdet-framework" target="_blank" rel="noopener">
+            <h3>playwright-ts-sdet-framework</h3>
+            <p>Playwright and TypeScript UI and API tests across Chromium and Firefox, with GitHub Actions CI, traces, video on failure and HTML reporting.</p>
+            <img src="https://github.com/HrishiPurandare/playwright-ts-sdet-framework/actions/workflows/playwright-ci.yml/badge.svg" alt="Current CI status of playwright-ts-sdet-framework" height="20" loading="lazy">
+        </a><a class="card repo" href="https://github.com/HrishiPurandare/pytest-api-automation-framework" target="_blank" rel="noopener">
+            <h3>pytest-api-automation-framework</h3>
+            <p>REST API tests in pytest with a reusable API client and fixtures, a Dockerised Flask mock API, and GitHub Actions CI.</p>
+            <img src="https://github.com/HrishiPurandare/pytest-api-automation-framework/actions/workflows/api-ci.yml/badge.svg" alt="Current CI status of pytest-api-automation-framework" height="20" loading="lazy">
+        </a><a class="card repo" href="https://github.com/HrishiPurandare/devops-test-automation-lab" target="_blank" rel="noopener">
+            <h3>devops-test-automation-lab</h3>
+            <p>Docker and CI lab: separate Playwright and PyTest images, docker-compose orchestration and a multi-job GitHub Actions workflow.</p>
+            <img src="https://github.com/HrishiPurandare/devops-test-automation-lab/actions/workflows/multi-job-ci.yml/badge.svg" alt="Current CI status of devops-test-automation-lab" height="20" loading="lazy">
+        </a>
+        </div>
+        <a class="more" href="/">← Back to home</a>
+    </div>
+</section>
+</main>
+<script>
+      document.querySelector('.theme').addEventListener('click', function () {
+        var root = document.documentElement;
+        var dark = root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+        root.dataset.theme = dark ? 'light' : 'dark';
+        try { localStorage.setItem('theme', root.dataset.theme); } catch (e) {}
+      });
+      addEventListener('beforeprint', function () { document.querySelectorAll('details').forEach(function (d) { d.open = true; }); });
+    </script>
 </body>
 </html>
