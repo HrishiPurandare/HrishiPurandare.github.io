@@ -2,572 +2,356 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hrishikesh Purandare | SDET | QA Automation Architect | AI First Quality Engineer</title>
-    <meta name="description" content="Hrishikesh Purandare: SDET and QA automation lead with 7+ years in banking, payments and AI/LLM testing. Playwright, Selenium, Appium, TypeScript, Python, CI/CD. Based in Dubai, open to relocation.">
+    <meta name="description" content="SDET and QA automation lead with 7+ years in banking, payments and AI/LLM testing. Playwright, Selenium, Appium, TypeScript, Python, CI/CD. Based in Dubai, open to relocation.">
+    <meta property="og:title" content="Hrishikesh Purandare | SDET | QA Automation Architect | AI First Quality Engineer">
+    <meta property="og:description" content="SDET and QA automation lead with 7+ years in banking, payments and AI/LLM testing. Playwright, Selenium, Appium, TypeScript, Python, CI/CD. Based in Dubai, open to relocation.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hrishipurandare.github.io/">
+    <meta name="theme-color" content="#11161a">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2311161a'/%3E%3Cpath d='M9 16.5l5 5 9-11' fill='none' stroke='%233ddc97' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+    <script>
+      try { var t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+    </script>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: #333;
-            line-height: 1.6;
-        }
-        
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            background: white;
-            min-height: 100vh;
-        }
-        
-        header {
-            background: linear-gradient(135deg, #2c3e50 0%, #27408b 100%);
-            color: white;
-            text-align: center;
-            padding: 3rem 2rem;
-        }
-        
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-            font-weight: 300;
-        }
-        
-        header .subtitle {
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-            opacity: 0.9;
-        }
-        
-        header .tagline {
-            font-size: 1rem;
-            margin-bottom: 1rem;
-            opacity: 0.8;
-        }
-        
-        header .contact-info {
-            font-size: 0.9rem;
-            opacity: 0.9;
-        }
-        
-        header .contact-info a {
-            color: #87ceeb;
-            text-decoration: none;
-        }
-        
-        header .contact-info a:hover {
-            color: white;
-            text-decoration: underline;
-        }
-        
-        section {
-            margin: 2rem auto;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            background: white;
-            margin-left: 2rem;
-            margin-right: 2rem;
-        }
-        
-        h2 {
-            color: #27408b;
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-            border-bottom: 2px solid #e0e0e0;
-            padding-bottom: 0.5rem;
-        }
-        
-        h3 {
-            color: #34495e;
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .about-text {
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
-        }
-        
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-        }
-        
-        .skills-grid div {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            padding: 1.5rem;
-            border-radius: 8px;
-            border-left: 4px solid #27408b;
-            transition: transform 0.3s ease;
-        }
-        
-        .skills-grid div:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-        
-        .skills-grid h3 {
-            color: #27408b;
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
-        }
-        
-        .skills-grid ul {
-            list-style: none;
-        }
-        
-        .skills-grid li {
-            padding: 0.3rem 0;
-            padding-left: 1rem;
-            position: relative;
-        }
-        
-        .skills-grid li:before {
-            content: "▶";
-            color: #27408b;
-            position: absolute;
-            left: 0;
-            font-size: 0.8rem;
-        }
-        
-        .job, .project {
-            margin-bottom: 2rem;
-            padding: 1.5rem;
-            border-left: 4px solid #27408b;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            border-radius: 5px;
-            transition: transform 0.3s ease;
-        }
-        
-        .job:hover, .project:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-        
-        .job h3, .project h3 {
-            margin-top: 0;
-            color: #27408b;
-            font-size: 1.3rem;
-        }
-        
-        .job p em, .project p {
-            color: #666;
-            font-style: italic;
-            margin-bottom: 1rem;
-        }
-        
-        .job ul, .project ul {
-            list-style: none;
-            padding-left: 0;
-        }
-        
-        .job li, .project li {
-            margin-bottom: 0.5rem;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-        
-        .job li:before {
-            content: "✓";
-            color: #27a745;
-            position: absolute;
-            left: 0;
-            font-weight: bold;
-        }
-        
-        .cert-list {
-            list-style: none;
-            padding: 0;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1rem;
-        }
-        
-        .cert-list li {
-            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
-            padding: 1rem;
-            border-radius: 5px;
-            border-left: 4px solid #2196f3;
-            transition: transform 0.3s ease;
-        }
-        
-        .cert-list li:hover {
-            transform: translateY(-2px);
-        }
-        
-        .contact-section {
-            background: linear-gradient(135deg, #27408b 0%, #2c3e50 100%);
-            color: white;
-            text-align: center;
-            margin: 2rem;
-            padding: 2rem;
-            border-radius: 10px;
-        }
-        
-        .contact-section h2 {
-            color: white;
-            border-bottom: 2px solid rgba(255,255,255,0.3);
-        }
-        
-        .contact-section a {
-            color: #87ceeb;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        
-        .contact-section a:hover {
-            color: white;
-            text-decoration: underline;
-        }
-        
-        .cta {
-            background: #27a745;
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 25px;
-            display: inline-block;
-            margin-top: 1rem;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background 0.3s ease;
-        }
-        
-        .cta:hover {
-            background: #218838;
-            text-decoration: none;
-        }
-        
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
-            }
-            
-            header .subtitle {
-                font-size: 1rem;
-            }
-            
-            section {
-                margin: 1rem;
-                padding: 1.5rem;
-            }
-            
-            .skills-grid {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-            }
-        }
-        
-        .highlight {
-            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
-            padding: 0.2rem 0.4rem;
-            border-radius: 3px;
-            font-weight: bold;
-        }
+:root {
+  --bg: #f6f5f1; --surface: #ffffff; --ink: #14181c; --muted: #565d65; --line: #dfddd5;
+  --accent: #0a7a4d; --accent-soft: #e0f2e9; --before: #b4552d;
+  --panel: #11161a; --panel-line: #2a3238; --panel-ink: #e9edef; --panel-muted: #9aa5ad; --pass: #3ddc97;
+  --sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0e1215; --surface: #161b1f; --ink: #eaedef; --muted: #a0a9b0; --line: #2a3238;
+    --accent: #3ddc97; --accent-soft: #15302a; --before: #e88f64; --panel: #161b1f;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0e1215; --surface: #161b1f; --ink: #eaedef; --muted: #a0a9b0; --line: #2a3238;
+  --accent: #3ddc97; --accent-soft: #15302a; --before: #e88f64; --panel: #161b1f;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; margin: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 76px; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--ink); font: 400 1rem/1.65 var(--sans); }
+a { color: inherit; }
+ul { padding: 0; list-style: none; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 3px; }
+.wrap { width: min(1120px, 100% - 40px); margin-inline: auto; }
+.skip { position: absolute; left: -999px; top: 8px; background: var(--ink); color: var(--bg); padding: 8px 14px; border-radius: 6px; z-index: 20; }
+.skip:focus { left: 12px; }
+.mono { font-family: var(--mono); }
 
-        /* Projects preview section styles */
-        .projects-preview {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 1rem;
-            margin-top: 1rem;
-        }
+/* Navigation */
+.nav { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+.nav .wrap { display: flex; align-items: center; gap: 28px; height: 60px; }
+.brand { font-weight: 600; text-decoration: none; margin-right: auto; white-space: nowrap; }
+.nav-links { display: flex; gap: 24px; }
+.nav-links a { color: var(--muted); font-size: .92rem; text-decoration: none; }
+.nav-links a:hover { color: var(--ink); }
+.theme { background: none; border: 1px solid var(--line); color: var(--ink); width: 36px; height: 36px; border-radius: 8px; cursor: pointer; display: grid; place-items: center; flex: none; }
+.theme:hover { border-color: var(--muted); }
+.theme svg { width: 17px; height: 17px; }
 
-        .projects-preview .project {
-            background: linear-gradient(135deg, #f8f9fa 0%, #f1f3f5 100%);
-            padding: 1rem;
-            border-radius: 8px;
-            border-left: 4px solid #27408b;
-        }
+/* Hero */
+.hero { padding: 72px 0 80px; }
+.hero .wrap { display: grid; grid-template-columns: 1.02fr 1fr; gap: 56px; align-items: center; }
+.eyebrow { font: 500 .82rem/1.5 var(--mono); color: var(--accent); margin-bottom: 18px; }
+h1 { font-size: clamp(2.5rem, 5.4vw, 4rem); line-height: 1.04; letter-spacing: -.03em; font-weight: 700; margin-bottom: 20px; }
+.lede { font-size: 1.16rem; line-height: 1.6; color: var(--muted); max-width: 34em; margin-bottom: 28px; }
+.lede strong { color: var(--ink); font-weight: 600; }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 26px; }
+.btn { display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border-radius: 8px; border: 1px solid var(--line); text-decoration: none; font-weight: 500; font-size: .95rem; transition: border-color .15s, transform .15s; }
+.btn:hover { border-color: var(--ink); transform: translateY(-1px); }
+.btn.primary { background: var(--ink); border-color: var(--ink); color: var(--bg); }
+.facts { display: flex; flex-wrap: wrap; gap: 6px 22px; color: var(--muted); font-size: .92rem; }
 
-        .projects-preview .project a {
-            color: #27408b;
-            text-decoration: none;
-            font-weight: bold;
-        }
+/* Results panel: the page's signature element */
+.panel { background: var(--panel); color: var(--panel-ink); border: 1px solid var(--panel-line); border-radius: 12px; overflow: hidden; box-shadow: 0 24px 50px -28px rgba(17, 22, 26, .55); font-family: var(--mono); }
+.panel-head { display: flex; justify-content: space-between; gap: 12px; padding: 13px 18px; border-bottom: 1px solid var(--panel-line); color: var(--panel-muted); font-size: .78rem; }
+.result { display: grid; grid-template-columns: auto 1fr; gap: 2px 12px; padding: 13px 18px; border-bottom: 1px solid var(--panel-line); animation: rise .45s ease-out both; }
+.result:nth-child(2) { animation-delay: .08s; } .result:nth-child(3) { animation-delay: .2s; } .result:nth-child(4) { animation-delay: .32s; }
+.result:nth-child(5) { animation-delay: .44s; } .result:nth-child(6) { animation-delay: .56s; } .result:nth-child(7) { animation-delay: .68s; }
+.result .tick { grid-row: span 2; color: var(--pass); font-size: .95rem; line-height: 1.5; }
+.result .name { font-size: .78rem; color: var(--panel-muted); }
+.result .value { font-size: 1.02rem; font-weight: 500; }
+.panel-foot { padding: 12px 18px; color: var(--panel-muted); font-size: .76rem; animation: rise .45s .8s ease-out both; }
+@keyframes rise { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
 
-        .projects-preview .project p {
-            color: #555;
-            margin-top: 0.5rem;
-            font-size: 0.95rem;
-        }
+/* Sections */
+section { padding: 72px 0; border-top: 1px solid var(--line); }
+h2 { font-size: clamp(1.7rem, 3vw, 2.2rem); line-height: 1.15; letter-spacing: -.02em; margin-bottom: 10px; }
+.section-note { color: var(--muted); max-width: 42em; margin-bottom: 36px; }
+h3 { font-size: 1.14rem; line-height: 1.35; letter-spacing: -.005em; }
 
-        .view-all {
-            display: inline-block;
-            margin-top: 1rem;
-            background: #27408b;
-            color: #fff;
-            padding: 0.6rem 1rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+/* Selected work */
+.work { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 26px; display: flex; flex-direction: column; min-width: 0; }
+.card .role { font: 400 .8rem/1.5 var(--mono); color: var(--muted); margin: 6px 0 14px; }
+.card p { color: var(--muted); }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; padding-top: 18px; }
+.chips li { font: 400 .76rem/1.4 var(--mono); padding: 3px 8px; border: 1px solid var(--line); border-radius: 5px; color: var(--muted); }
+.bars { margin: 2px 0 18px; display: grid; gap: 7px; }
+.bar { display: grid; grid-template-columns: 58px 1fr; align-items: center; gap: 10px; font: 400 .78rem/1 var(--mono); color: var(--muted); }
+.bar i { display: block; height: 22px; border-radius: 4px; background: var(--before); min-width: 2px; position: relative; }
+.bar.after i { background: var(--accent); }
+.bar b { font-weight: 500; color: var(--ink); white-space: nowrap; }
+.track { display: flex; align-items: center; gap: 8px; min-width: 0; }
 
-        .view-all:hover {
-            background: #1f3566;
-            text-decoration: none;
-        }
-    </style>
+/* Experience */
+.job { display: grid; grid-template-columns: 170px 1fr; gap: 28px; padding: 30px 0; border-top: 1px solid var(--line); }
+.job:first-of-type { border-top: 0; padding-top: 8px; }
+.when { font: 400 .82rem/1.6 var(--mono); color: var(--muted); }
+.org { color: var(--muted); margin: 2px 0 14px; }
+.job li, details li { position: relative; padding-left: 18px; margin-bottom: 8px; }
+.job li::before { content: ""; position: absolute; left: 2px; top: .68em; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+summary { cursor: pointer; color: var(--accent); font-weight: 500; font-size: .94rem; margin-top: 6px; width: fit-content; }
+details ul { margin-top: 12px; }
+
+/* Skills */
+.skills { display: grid; grid-template-columns: repeat(3, 1fr); gap: 34px 36px; }
+.skills h3 { font-size: 1rem; margin-bottom: 10px; padding-bottom: 8px; border-bottom: 2px solid var(--ink); }
+.skills li { padding: 4px 0; font-size: .95rem; color: var(--muted); }
+
+/* Repositories */
+.repos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.repo { text-decoration: none; transition: border-color .15s, transform .15s; }
+.repo:hover { border-color: var(--accent); transform: translateY(-2px); }
+.repo h3 { font: 500 .95rem/1.4 var(--mono); overflow-wrap: anywhere; margin-bottom: 10px; }
+.repo p { font-size: .95rem; margin-bottom: 16px; }
+.repo img { display: block; height: 20px; width: auto; align-self: flex-start; margin-top: auto; }
+.more { display: inline-block; margin-top: 22px; color: var(--accent); font-weight: 500; }
+
+/* Credentials */
+.creds { display: grid; grid-template-columns: 2fr 1fr; gap: 48px; }
+.cred-list li { padding: 11px 0; border-bottom: 1px solid var(--line); }
+.cred-list strong { font-weight: 600; }
+.cred-list span { color: var(--muted); }
+
+/* Contact */
+.contact { background: var(--panel); color: var(--panel-ink); border-top: 0; }
+.contact h2 { font-size: clamp(2rem, 4.4vw, 3rem); max-width: 16em; margin-bottom: 26px; }
+.contact-links { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(310px, 100%), 1fr)); gap: 18px 24px; font-family: var(--mono); font-size: .92rem; }
+.contact-links a { text-decoration-color: var(--pass); text-underline-offset: 4px; overflow-wrap: anywhere; }
+.contact-links small { display: block; color: var(--panel-muted); font-size: .76rem; }
+
+@media (max-width: 920px) {
+  .hero { padding: 48px 0 56px; }
+  .hero .wrap, .creds { grid-template-columns: 1fr; gap: 40px; }
+  .work, .repos { grid-template-columns: 1fr; }
+  .skills { grid-template-columns: repeat(2, 1fr); }
+  .nav-links { display: none; }
+  section { padding: 56px 0; }
+}
+@media (max-width: 620px) {
+  .skills { grid-template-columns: 1fr; }
+  .job { grid-template-columns: 1fr; gap: 6px; }
+  .card { padding: 20px; }
+  .btn { flex: 1 1 auto; justify-content: center; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+@media print {
+  .nav, .theme, .actions, summary { display: none; }
+  .contact { background: none; color: inherit; }
+  .result, .panel-foot { animation: none; }
+}
+</style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Hrishikesh Purandare</h1>
-            <p class="subtitle">SDET | QA Automation Architect | AI First Quality Engineer</p>
-            <p class="tagline">Playwright • Selenium • Appium • Python • TypeScript • AI/LLM Testing • Kubernetes • CI/CD</p>
-            <p class="tagline">7+ Years Experience | Leading QA Teams | Banking &amp; Payments Specialist</p>
-            <p class="contact-info">
-                📧 <a href="mailto:hrishikesh.purandarem@gmail.com">hrishikesh.purandarem@gmail.com</a> |
-                📱 +971-556193114 |
-                🌐 <a href="https://www.linkedin.com/in/hrishikesh-purandare-qa" target="_blank" rel="noopener">LinkedIn</a> |
-                <a href="/projects.html" style="color:#87ceeb; text-decoration:none; font-weight:600;" target="_self">Open Source / Projects</a>
-                | 📍 Dubai, UAE
-            </p>
-        </header>
-
-        <section>
-            <h2>About Me</h2>
-            <p class="about-text">🌍 <strong>ISTQB Advanced Level certified QA Automation Engineer &amp; SDET with 7+ years</strong> across banking, payments, and sports-technology domains, specializing in test automation framework architecture (Playwright, Selenium, Python, TypeScript) for regulated environments. Currently leading a 4-person QA/SDET team at ADCB.</p>
-
-            <p class="about-text">💼 <strong>Enterprise &amp; AI Expertise:</strong> Established QA processes from scratch for a real-time payment-processing platform supporting SWIFT, Fedwire, ACH, and SEPA networks, cutting full regression from 7 hours to 40 minutes. Extended naturally into containerized CI/CD, Kubernetes deployment ownership, and AI/LLM quality engineering (testing banking virtual assistants for accuracy, RAG grounding, and prompt-injection security).</p>
-
-            <p class="about-text">🚀 <strong>Leadership &amp; Scale:</strong> Grew and upskilled a QA team of 7, personally transitioning engineers into automation and implementation roles and doubling team throughput. Currently architecting enterprise Salesforce CRM automation with GitHub Actions CI/CD pipelines for a banking transformation.</p>
-        </section>
-
-        <section>
-            <h2>Technical Skills</h2>
-            <div class="skills-grid">
-                <div>
-                    <h3>🔧 Automation &amp; Frameworks</h3>
-                    <ul>
-                        <li>Playwright (TypeScript/JavaScript)</li>
-                        <li>Selenium WebDriver</li>
-                        <li>Appium (Android/iOS)</li>
-                        <li>SHAFT, TestNG, PyTest</li>
-                        <li>Cucumber/Gherkin (BDD)</li>
-                        <li>Page Object Model</li>
-                        <li>Python • JavaScript • TypeScript • Java • SQL • Bash</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>🤖 AI/LLM Quality Engineering</h3>
-                    <ul>
-                        <li>LLM Response Evaluation</li>
-                        <li>RAG Retrieval Testing</li>
-                        <li>Hallucination, Bias &amp; Robustness Testing</li>
-                        <li>Prompt-Injection &amp; Data-Leakage Testing</li>
-                        <li>Agentic Workflow Testing</li>
-                        <li>AI-Response Regression in CI/CD</li>
-                        <li>Ragas, DeepEval, Promptfoo, LangSmith, Braintrust</li>
-                        <li>OpenAI API Automation &amp; Key Management</li>
-                        <li>MCP Servers, GitHub Copilot, NotebookLM, Gemini</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>🌐 API, Data &amp; Performance</h3>
-                    <ul>
-                        <li>REST API Testing</li>
-                        <li>Postman, Swagger, REST Assured</li>
-                        <li>Kong Gateway APIs</li>
-                        <li>JSON/XML Schema Validation</li>
-                        <li>Message/Schema Comparison (MX/MT)</li>
-                        <li>Microservices Testing</li>
-                        <li>JMeter Load Testing</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>⚙️ CI/CD &amp; Infrastructure</h3>
-                    <ul>
-                        <li>GitHub Actions (parallel runners, PR-triggered)</li>
-                        <li>Azure Pipelines, TeamCity</li>
-                        <li>Docker (multi-stage builds, isolated environments)</li>
-                        <li>Kubernetes (deployment, pod troubleshooting)</li>
-                        <li>AWS exposure (EKS, VPC CNI, IRSA)</li>
-                        <li>Linux Performance Diagnostics</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>🏦 Domain Expertise</h3>
-                    <ul>
-                        <li>Real-Time Payments (FedNow, Fedwire, SWIFT, ACH, SEPA, InstaPay)</li>
-                        <li>ISO 20022 Messaging, GDPR Compliance Testing</li>
-                        <li>Salesforce CRM (Lightning Web Components, Shadow DOM)</li>
-                        <li>Banking &amp; Fintech, Islamic Banking</li>
-                        <li>Transaction Monitoring / Fraud-Risk Screening Flows</li>
-                        <li>Regulated Environments</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>👥 Leadership &amp; Practices</h3>
-                    <ul>
-                        <li>Team Leadership &amp; Mentoring (4–7 people)</li>
-                        <li>Test Strategy &amp; Planning Across Squads</li>
-                        <li>Defect Triage, Code Reviews, Sprint Estimation</li>
-                        <li>Requirements Traceability</li>
-                        <li>JIRA, TestRail, Confluence, Grafana</li>
-                        <li>Allure &amp; HTML Reporting</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2>Professional Experience</h2>
-
-            <div class="job">
-                <h3>Senior QA Automation Engineer / SDET Lead</h3>
-                <p><em>ADCB (Abu Dhabi Commercial Bank) — via HCLTech — Dubai/Abu Dhabi, UAE | Feb 2026 – Present</em></p>
-                <ul>
-                    <li>Lead a 4-person QA/SDET team delivering test strategy and automation for enterprise Salesforce CRM transformation, covering functional, integration, regression, and UAT across customer onboarding and case-management workflows</li>
-                    <li>Architected a Page Object Model automation framework in Playwright and TypeScript for Salesforce CRM — isolating custom objects, Lightning Web Components, and Shadow DOM boundaries — with secure environment-variable-based test data, reusable OAuth session storage state, and fully automated MFA login</li>
-                    <li>Built and tuned a GitHub Actions CI/CD pipeline with parallel execution across multiple runners, triggering regression on every pull request and cutting build validation from 3 hours to 45 minutes (75%), with a scheduled daily sanity run and Microsoft Teams webhook failure notifications</li>
-                    <li>Partnered with business analysts, developers, and senior stakeholders to define acceptance criteria, achieving 100% requirements traceability and a 40% reduction in defect escape rate</li>
-                    <li>Own defect management for ~35 bugs triaged per sprint, with quality dashboards in TestRail, JIRA, and Grafana giving senior leadership sprint-level visibility</li>
-                    <li>Test AI-powered banking assistant responses for policy accuracy, RAG retrieval correctness, and prompt-injection/data-leakage security, automating checks through the OpenAI API with secure key management</li>
-                    <li>Standardized automated reporting (HTML reports, screenshots, videos, traces) to speed up debugging and root-cause analysis on critical CRM workflow failures</li>
-                </ul>
-            </div>
-
-            <div class="job">
-                <h3>Test Analyst – Automation (QA Lead capacity)</h3>
-                <p><em>Euronet Services India Pvt Ltd — Pune, India | Nov 2022 – Feb 2026</em></p>
-                <ul>
-                    <li>First dedicated automation engineer for the Pune location — automated internal payment-switch APIs (Kong Gateway, Postman/JavaScript), then migrated the automation into SHAFT (Java/Selenium/TestNG) before re-architecting it in Playwright/TypeScript with Page Object Model</li>
-                    <li>Architected and executed the migration of 700+ legacy Selenium test cases to Playwright, cutting automation flakiness by ~60%</li>
-                    <li>Sole QA engineer establishing the QA function from scratch for "Payment Hub," a real-time payment-processing platform for the US market supporting FedNow, Fedwire, SWIFT, ACH, SEPA, and InstaPay networks, inside a full Scrum team</li>
-                    <li>Built ~100 automated end-to-end scenarios (~750 underlying test cases) validating the complete transaction lifecycle — API trigger → JSON payload → UI verification → XML/MX/MT message and schema validation — including negative-path scenarios</li>
-                    <li>Implemented Docker-based CI/CD provisioning isolated backend/frontend containers fresh per test run, cutting full regression from 7 hours to 40 minutes (90%) and reducing release-level defect leakage from 10–20 bugs to 2–5 bugs per release</li>
-                    <li>Maintained 100% ISO 20022 and GDPR compliance test coverage for real-time payment workflows, with zero compliance incidents over 3+ years</li>
-                    <li>Deployed the application on Kubernetes (dedicated pods per microservice) for stable demo/production-like environments; diagnosed pod failures, tuned resource limits, and troubleshot node/disk issues</li>
-                    <li>Ran JMeter load tests on payment-processing APIs</li>
-                    <li>Grew and led a QA chapter of 7 junior/fresher testers — personally trained and transitioned 3 into automation testing and 2 into implementation engineering; doubled team throughput through structured code reviews, test-case audits, and sprint estimation</li>
-                    <li>Defined test strategy and led defect triage across 3 product squads</li>
-                    <li>Tested AI-powered banking virtual assistants: validated LLM response accuracy against banking policy/knowledge-base documents, performed RAG retrieval, hallucination, bias, and robustness testing, and tested prompt-injection/data-leakage security; integrated automated AI-response regression testing into CI/CD</li>
-                    <li>Used MCP servers in test automation work and integrated GitHub Copilot Pro into the automation workflow, improving script-writing speed and accuracy</li>
-                    <li>Received the Euronet Half-Yearly Recognition Award for delivering the Payment Hub automation ahead of schedule</li>
-                </ul>
-            </div>
-
-            <div class="job">
-                <h3>Senior Software Engineer</h3>
-                <p><em>Maveric Systems Limited — deployed to Citibank / HSBC banking platform — Pune, India | Feb 2022 – Nov 2022</em></p>
-                <ul>
-                    <li>Automated 5–8 core customer-onboarding workflows for a phone/mobile banking platform using Java, Selenium, and TestNG, building out 200+ automated test scripts across positive, negative, and edge-case scenarios</li>
-                    <li>Delivered zero regression failures across 4 consecutive releases</li>
-                    <li>Executed regression suites for core banking modules and managed defects with developers</li>
-                </ul>
-            </div>
-
-            <div class="job">
-                <h3>QA Specialist II</h3>
-                <p><em>Hudl India — Pune, India | Jun 2019 – Jan 2022</em></p>
-                <ul>
-                    <li>Began in manual testing for sports-technology applications, owning test case design, exploratory testing, and validation of functional workflows and user journeys</li>
-                    <li>Moved into test automation on the Wyscout application, scripting 300+ BDD scenarios for player, team, and user workflows in a Python-based Cucumber/Gherkin framework and reaching 85% regression automation coverage</li>
-                    <li>Automated mobile tests on Android and iOS with Appium</li>
-                    <li>Validated API integrations and real-time data workflows across microservices with Postman and Python, maintaining &lt;0.5% data error tolerance across 3 major product launches</li>
-                    <li>Gained first exposure to CI/CD, executing automated test suites through TeamCity pipelines</li>
-                </ul>
-            </div>
-        </section>
-
-        <section>
-            <h2>Featured Projects</h2>
-
-            <div class="project">
-                <h3>🏦 Enterprise Salesforce CRM Automation for Banking Transformation</h3>
-                <p><strong>Role:</strong> Senior QA Automation Engineer / SDET Lead</p>
-                <p><strong>Impact:</strong> Architected the automation framework for an enterprise CRM, leading a 4-person QA team across customer onboarding and case-management workflows; cut build validation from 3 hours to 45 minutes and defect escape rate by 40%</p>
-                <p><strong>Technologies:</strong> Playwright, TypeScript, Page Object Model, GitHub Actions, Shadow DOM Testing, OAuth Session Storage</p>
-            </div>
-
-            <div class="project">
-                <h3>💳 Real-Time Payment Hub Testing (FedNow, Fedwire, SWIFT, ACH, SEPA)</h3>
-                <p><strong>Role:</strong> Sole QA Engineer &amp; Automation Lead</p>
-                <p><strong>Impact:</strong> Built ~100 E2E scenarios (~750 test cases) covering the complete transaction lifecycle, reduced full regression from 7 hours to 40 minutes via Docker CI/CD, and reduced defect leakage from 10–20 to 2–5 bugs per release</p>
-                <p><strong>Technologies:</strong> Playwright, TypeScript, Docker, Kubernetes, JSON/XML Schema Validation, API Testing</p>
-            </div>
-
-            <div class="project">
-                <h3>🤖 AI-Powered Banking Virtual Assistant Quality Engineering</h3>
-                <p><strong>Role:</strong> QA Automation Engineer, AI/LLM Testing</p>
-                <p><strong>Impact:</strong> Validated banking assistants against policy and knowledge-base documents for accuracy, RAG retrieval, hallucination, bias, robustness, and prompt-injection security; integrated automated AI-response regression into CI/CD</p>
-                <p><strong>Technologies:</strong> Ragas, DeepEval, Promptfoo, LangSmith, Braintrust, OpenAI API, CI/CD Integration</p>
-            </div>
-
-            <div class="project">
-                <h3>📱 Mobile Banking Onboarding Automation Suite</h3>
-                <p><strong>Role:</strong> Senior Software Engineer</p>
-                <p><strong>Impact:</strong> Automated 5–8 core customer-onboarding workflows with 200+ test scripts across positive, negative, and edge-case scenarios; delivered zero regression failures across 4 releases</p>
-                <p><strong>Technologies:</strong> Java, Selenium, TestNG</p>
-            </div>
-        </section>
-
-        <section>
-            <h2>Open Source / GitHub Projects (Preview)</h2>
-            <p class="about-text">A quick preview of selected public repositories. Click a project to open its GitHub repository.</p>
-
-            <div class="projects-preview">
-                <div class="project">
-                    <h3><a href="https://github.com/HrishiPurandare/playwright-ts-sdet-framework" target="_blank" rel="noopener">playwright-ts-sdet-framework</a></h3>
-                    <p>Playwright and TypeScript UI and API tests across Chromium and Firefox, with GitHub Actions CI, traces, video on failure and HTML reporting.</p>
-                </div>
-
-                <div class="project">
-                    <h3><a href="https://github.com/HrishiPurandare/pytest-api-automation-framework" target="_blank" rel="noopener">pytest-api-automation-framework</a></h3>
-                    <p>REST API tests in pytest with a reusable API client and fixtures, a Dockerised Flask mock API, and GitHub Actions CI.</p>
-                </div>
-
-                <div class="project">
-                    <h3><a href="https://github.com/HrishiPurandare/devops-test-automation-lab" target="_blank" rel="noopener">devops-test-automation-lab</a></h3>
-                    <p>Docker and CI lab: separate Playwright and PyTest images, docker-compose orchestration and a multi-job GitHub Actions workflow.</p>
-                </div>
-            </div>
-
-            <a class="view-all" href="/projects.html" target="_self">View all projects →</a>
-        </section>
-
-        <section>
-            <h2>Certifications &amp; Professional Development</h2>
-            <ul class="cert-list">
-                <li><strong>ISTQB Advanced Level</strong></li>
-                <li><strong>Playwright Automation Testing &amp; Framework Design</strong> – Udemy</li>
-                <li><strong>DevOps, CI/CD Pipelines &amp; Performance Testing</strong> – Udemy</li>
-                <li><strong>GenAI Tools and AI Agents for Software Testing</strong> – Udemy</li>
-                <li><strong>Understanding APIs and RESTful APIs</strong> – Udemy</li>
-                <li><strong>Generative AI Mastermind</strong> – Outskill</li>
-                <li><strong>AI Tools and ChatGPT Workshop</strong> – be10x</li>
-                <li><strong>⭐ Euronet Half-Yearly Recognition Award</strong> – 2023 (Payment Hub Automation Delivery)</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Education</h2>
-            <div class="job">
-                <h3>Bachelor of Engineering (Electronics &amp; Telecommunication)</h3>
-                <p><em>Savitribai Phule Pune University, India | 2019</em></p>
-            </div>
-        </section>
-
-        <section class="contact-section">
-            <h2>Let's Connect</h2>
-            <p>Ready to lead QA/SDET initiatives with proven expertise in enterprise automation, AI/LLM testing, and team leadership!</p>
-            <p>
-                📧 <a href="mailto:hrishikesh.purandarem@gmail.com">hrishikesh.purandarem@gmail.com</a><br>
-                🌐 <a href="https://www.linkedin.com/in/hrishikesh-purandare-qa" target="_blank" rel="noopener">LinkedIn Profile</a><br>
-                📱 +971-556193114<br>
-                📍 Dubai, UAE – Open to Global Relocation with Visa Sponsorship
-            </p>
-            <a href="mailto:hrishikesh.purandarem@gmail.com" class="cta">Let's Work Together</a>
-        </section>
+<a class="skip" href="#main">Skip to content</a>
+<nav class="nav" aria-label="Main">
+    <div class="wrap">
+        <a class="brand" href="#top">Hrishikesh Purandare</a>
+        <div class="nav-links">
+            <a href="#work">Work</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#code">Code</a><a href="#contact">Contact</a>
+        </div>
+        <button class="theme" type="button" aria-label="Switch between light and dark theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg></button>
     </div>
+</nav>
+<main id="main">
+<header class="hero" id="top">
+    <div class="wrap">
+        <div>
+            <p class="eyebrow">SDET | QA Automation Architect | AI First Quality Engineer</p>
+            <h1>Faster releases for systems that can't afford to break.</h1>
+            <p class="lede"><strong>7+ years</strong> building test automation across banking, payments and sports technology, from real-time payment platforms to LLM-powered banking assistants. Currently leading a <strong>4-person QA/SDET team at ADCB</strong>.</p>
+            <div class="actions">
+                <a class="btn primary" href="mailto:hrishikesh.purandarem@gmail.com">Email me</a>
+                <a class="btn" href="https://www.linkedin.com/in/hrishikesh-purandare-qa" target="_blank" rel="noopener">LinkedIn</a>
+                <a class="btn" href="https://github.com/HrishiPurandare" target="_blank" rel="noopener">GitHub</a>
+            </div>
+            <ul class="facts">
+                <li>ISTQB Advanced Level</li>
+                <li>Dubai, UAE</li>
+                <li>Open to relocation with visa sponsorship</li>
+            </ul>
+        </div>
+        <div class="panel" aria-label="Selected results">
+            <div class="panel-head"><span>selected-results</span><span>ADCB + Euronet</span></div>
+            <div class="result"><span class="tick" aria-hidden="true">✓</span><span class="name">Full regression</span><span class="value">7 hours → 40 minutes</span></div><div class="result"><span class="tick" aria-hidden="true">✓</span><span class="name">Build validation</span><span class="value">3 hours → 45 minutes</span></div><div class="result"><span class="tick" aria-hidden="true">✓</span><span class="name">Flakiness, 700+ migrated tests</span><span class="value">~60% lower</span></div><div class="result"><span class="tick" aria-hidden="true">✓</span><span class="name">Defect leakage per release</span><span class="value">10–20 bugs → 2–5 bugs</span></div><div class="result"><span class="tick" aria-hidden="true">✓</span><span class="name">Defect escape rate</span><span class="value">40% lower</span></div><div class="result"><span class="tick" aria-hidden="true">✓</span><span class="name">ISO 20022 and GDPR test coverage</span><span class="value">100%, zero incidents</span></div>
+            <div class="panel-foot">Full context in Selected work and Experience.</div>
+        </div>
+    </div>
+</header>
+
+<section id="work">
+    <div class="wrap">
+        <h2>Selected work</h2>
+        <p class="section-note">Regulated, high-stakes systems where a missed defect has a real cost.</p>
+        <div class="work">
+        <article class="card">
+            <h3>Real-Time Payment Hub Testing (FedNow, Fedwire, SWIFT, ACH, SEPA)</h3>
+            <p class="role">Sole QA Engineer &amp; Automation Lead</p>
+            <div class="bars" role="img" aria-label="Reduced from 7 hours to 40 minutes">
+                <div class="bar"><span>Before</span><span class="track"><i style="width:calc(100% - 92px)"></i><b>7 hours</b></span></div>
+                <div class="bar after"><span>After</span><span class="track"><i style="width:calc((100% - 92px) * 0.0952)"></i><b>40 minutes</b></span></div>
+            </div>
+            <p>Built ~100 E2E scenarios (~750 test cases) covering the complete transaction lifecycle, reduced full regression from 7 hours to 40 minutes via Docker CI/CD, and reduced defect leakage from 10–20 to 2–5 bugs per release</p>
+            <ul class="chips"><li>Playwright</li><li>TypeScript</li><li>Docker</li><li>Kubernetes</li><li>JSON/XML Schema Validation</li><li>API Testing</li></ul>
+        </article>
+        <article class="card">
+            <h3>Enterprise Salesforce CRM Automation for Banking Transformation</h3>
+            <p class="role">Senior QA Automation Engineer / SDET Lead</p>
+            <div class="bars" role="img" aria-label="Reduced from 3 hours to 45 minutes">
+                <div class="bar"><span>Before</span><span class="track"><i style="width:calc(100% - 92px)"></i><b>3 hours</b></span></div>
+                <div class="bar after"><span>After</span><span class="track"><i style="width:calc((100% - 92px) * 0.25)"></i><b>45 minutes</b></span></div>
+            </div>
+            <p>Architected the automation framework for an enterprise CRM, leading a 4-person QA team across customer onboarding and case-management workflows; cut build validation from 3 hours to 45 minutes and defect escape rate by 40%</p>
+            <ul class="chips"><li>Playwright</li><li>TypeScript</li><li>Page Object Model</li><li>GitHub Actions</li><li>Shadow DOM Testing</li><li>OAuth Session Storage</li></ul>
+        </article>
+        <article class="card">
+            <h3>AI-Powered Banking Virtual Assistant Quality Engineering</h3>
+            <p class="role">QA Automation Engineer, AI/LLM Testing</p>
+            
+            <p>Validated banking assistants against policy and knowledge-base documents for accuracy, RAG retrieval, hallucination, bias, robustness, and prompt-injection security; integrated automated AI-response regression into CI/CD</p>
+            <ul class="chips"><li>Ragas</li><li>DeepEval</li><li>Promptfoo</li><li>LangSmith</li><li>Braintrust</li><li>OpenAI API</li><li>CI/CD Integration</li></ul>
+        </article>
+        <article class="card">
+            <h3>Mobile Banking Onboarding Automation Suite</h3>
+            <p class="role">Senior Software Engineer</p>
+            
+            <p>Automated 5–8 core customer-onboarding workflows with 200+ test scripts across positive, negative, and edge-case scenarios; delivered zero regression failures across 4 releases</p>
+            <ul class="chips"><li>Java</li><li>Selenium</li><li>TestNG</li></ul>
+        </article>
+        </div>
+    </div>
+</section>
+
+<section id="experience">
+    <div class="wrap">
+        <h2>Experience</h2>
+        <p class="section-note">From manual testing in 2019 to leading QA teams and architecting automation frameworks.</p>
+        <article class="job">
+            <p class="when">Feb 2026 – Present</p>
+            <div>
+                <h3>Senior QA Automation Engineer / SDET Lead</h3>
+                <p class="org">ADCB (Abu Dhabi Commercial Bank) — via HCLTech — Dubai/Abu Dhabi, UAE</p>
+                <ul><li>Lead a 4-person QA/SDET team delivering test strategy and automation for enterprise Salesforce CRM transformation, covering functional, integration, regression, and UAT across customer onboarding and case-management workflows</li><li>Built and tuned a GitHub Actions CI/CD pipeline with parallel execution across multiple runners, triggering regression on every pull request and cutting build validation from 3 hours to 45 minutes (75%), with a scheduled daily sanity run and Microsoft Teams webhook failure notifications</li><li>Partnered with business analysts, developers, and senior stakeholders to define acceptance criteria, achieving 100% requirements traceability and a 40% reduction in defect escape rate</li><li>Test AI-powered banking assistant responses for policy accuracy, RAG retrieval correctness, and prompt-injection/data-leakage security, automating checks through the OpenAI API with secure key management</li></ul>
+                <details><summary>Show 3 more</summary><ul><li>Architected a Page Object Model automation framework in Playwright and TypeScript for Salesforce CRM — isolating custom objects, Lightning Web Components, and Shadow DOM boundaries — with secure environment-variable-based test data, reusable OAuth session storage state, and fully automated MFA login</li><li>Own defect management for ~35 bugs triaged per sprint, with quality dashboards in TestRail, JIRA, and Grafana giving senior leadership sprint-level visibility</li><li>Standardized automated reporting (HTML reports, screenshots, videos, traces) to speed up debugging and root-cause analysis on critical CRM workflow failures</li></ul></details>
+            </div>
+        </article><article class="job">
+            <p class="when">Nov 2022 – Feb 2026</p>
+            <div>
+                <h3>Test Analyst – Automation (QA Lead capacity)</h3>
+                <p class="org">Euronet Services India Pvt Ltd — Pune, India</p>
+                <ul><li>Sole QA engineer establishing the QA function from scratch for "Payment Hub," a real-time payment-processing platform for the US market supporting FedNow, Fedwire, SWIFT, ACH, SEPA, and InstaPay networks, inside a full Scrum team</li><li>Implemented Docker-based CI/CD provisioning isolated backend/frontend containers fresh per test run, cutting full regression from 7 hours to 40 minutes (90%) and reducing release-level defect leakage from 10–20 bugs to 2–5 bugs per release</li><li>Architected and executed the migration of 700+ legacy Selenium test cases to Playwright, cutting automation flakiness by ~60%</li><li>Tested AI-powered banking virtual assistants: validated LLM response accuracy against banking policy/knowledge-base documents, performed RAG retrieval, hallucination, bias, and robustness testing, and tested prompt-injection/data-leakage security; integrated automated AI-response regression testing into CI/CD</li><li>Grew and led a QA chapter of 7 junior/fresher testers — personally trained and transitioned 3 into automation testing and 2 into implementation engineering; doubled team throughput through structured code reviews, test-case audits, and sprint estimation</li></ul>
+                <details><summary>Show 8 more</summary><ul><li>First dedicated automation engineer for the Pune location — automated internal payment-switch APIs (Kong Gateway, Postman/JavaScript), then migrated the automation into SHAFT (Java/Selenium/TestNG) before re-architecting it in Playwright/TypeScript with Page Object Model</li><li>Built ~100 automated end-to-end scenarios (~750 underlying test cases) validating the complete transaction lifecycle — API trigger → JSON payload → UI verification → XML/MX/MT message and schema validation — including negative-path scenarios</li><li>Maintained 100% ISO 20022 and GDPR compliance test coverage for real-time payment workflows, with zero compliance incidents over 3+ years</li><li>Deployed the application on Kubernetes (dedicated pods per microservice) for stable demo/production-like environments; diagnosed pod failures, tuned resource limits, and troubleshot node/disk issues</li><li>Ran JMeter load tests on payment-processing APIs</li><li>Defined test strategy and led defect triage across 3 product squads</li><li>Used MCP servers in test automation work and integrated GitHub Copilot Pro into the automation workflow, improving script-writing speed and accuracy</li><li>Received the Euronet Half-Yearly Recognition Award for delivering the Payment Hub automation ahead of schedule</li></ul></details>
+            </div>
+        </article><article class="job">
+            <p class="when">Feb 2022 – Nov 2022</p>
+            <div>
+                <h3>Senior Software Engineer</h3>
+                <p class="org">Maveric Systems Limited — deployed to Citibank / HSBC banking platform — Pune, India</p>
+                <ul><li>Automated 5–8 core customer-onboarding workflows for a phone/mobile banking platform using Java, Selenium, and TestNG, building out 200+ automated test scripts across positive, negative, and edge-case scenarios</li><li>Delivered zero regression failures across 4 consecutive releases</li><li>Executed regression suites for core banking modules and managed defects with developers</li></ul>
+                
+            </div>
+        </article><article class="job">
+            <p class="when">Jun 2019 – Jan 2022</p>
+            <div>
+                <h3>QA Specialist II</h3>
+                <p class="org">Hudl India — Pune, India</p>
+                <ul><li>Began in manual testing for sports-technology applications, owning test case design, exploratory testing, and validation of functional workflows and user journeys</li><li>Moved into test automation on the Wyscout application, scripting 300+ BDD scenarios for player, team, and user workflows in a Python-based Cucumber/Gherkin framework and reaching 85% regression automation coverage</li><li>Automated mobile tests on Android and iOS with Appium</li><li>Validated API integrations and real-time data workflows across microservices with Postman and Python, maintaining &lt;0.5% data error tolerance across 3 major product launches</li><li>Gained first exposure to CI/CD, executing automated test suites through TeamCity pipelines</li></ul>
+                
+            </div>
+        </article>
+    </div>
+</section>
+
+<section id="skills">
+    <div class="wrap">
+        <h2>Skills</h2>
+        <p class="section-note">Grouped by what the work needs.</p>
+        <div class="skills">
+        <div><h3>Automation &amp; Frameworks</h3><ul><li>Playwright (TypeScript/JavaScript)</li><li>Selenium WebDriver</li><li>Appium (Android/iOS)</li><li>SHAFT, TestNG, PyTest</li><li>Cucumber/Gherkin (BDD)</li><li>Page Object Model</li><li>Python • JavaScript • TypeScript • Java • SQL • Bash</li></ul></div><div><h3>AI/LLM Quality Engineering</h3><ul><li>LLM Response Evaluation</li><li>RAG Retrieval Testing</li><li>Hallucination, Bias &amp; Robustness Testing</li><li>Prompt-Injection &amp; Data-Leakage Testing</li><li>Agentic Workflow Testing</li><li>AI-Response Regression in CI/CD</li><li>Ragas, DeepEval, Promptfoo, LangSmith, Braintrust</li><li>OpenAI API Automation &amp; Key Management</li><li>MCP Servers, GitHub Copilot, NotebookLM, Gemini</li></ul></div><div><h3>API, Data &amp; Performance</h3><ul><li>REST API Testing</li><li>Postman, Swagger, REST Assured</li><li>Kong Gateway APIs</li><li>JSON/XML Schema Validation</li><li>Message/Schema Comparison (MX/MT)</li><li>Microservices Testing</li><li>JMeter Load Testing</li></ul></div><div><h3>CI/CD &amp; Infrastructure</h3><ul><li>GitHub Actions (parallel runners, PR-triggered)</li><li>Azure Pipelines, TeamCity</li><li>Docker (multi-stage builds, isolated environments)</li><li>Kubernetes (deployment, pod troubleshooting)</li><li>AWS exposure (EKS, VPC CNI, IRSA)</li><li>Linux Performance Diagnostics</li></ul></div><div><h3>Domain Expertise</h3><ul><li>Real-Time Payments (FedNow, Fedwire, SWIFT, ACH, SEPA, InstaPay)</li><li>ISO 20022 Messaging, GDPR Compliance Testing</li><li>Salesforce CRM (Lightning Web Components, Shadow DOM)</li><li>Banking &amp; Fintech, Islamic Banking</li><li>Transaction Monitoring / Fraud-Risk Screening Flows</li><li>Regulated Environments</li></ul></div><div><h3>Leadership &amp; Practices</h3><ul><li>Team Leadership &amp; Mentoring (4–7 people)</li><li>Test Strategy &amp; Planning Across Squads</li><li>Defect Triage, Code Reviews, Sprint Estimation</li><li>Requirements Traceability</li><li>JIRA, TestRail, Confluence, Grafana</li><li>Allure &amp; HTML Reporting</li></ul></div>
+        </div>
+    </div>
+</section>
+
+<section id="code">
+    <div class="wrap">
+        <h2>Public code</h2>
+        <p class="section-note">Client work is private, so these repositories show how I structure tests. Each status badge is live from GitHub Actions.</p>
+        <div class="repos">
+        <a class="card repo" href="https://github.com/HrishiPurandare/playwright-ts-sdet-framework" target="_blank" rel="noopener">
+            <h3>playwright-ts-sdet-framework</h3>
+            <p>Playwright and TypeScript UI and API tests across Chromium and Firefox, with GitHub Actions CI, traces, video on failure and HTML reporting.</p>
+            <img src="https://github.com/HrishiPurandare/playwright-ts-sdet-framework/actions/workflows/playwright-ci.yml/badge.svg" alt="Current CI status of playwright-ts-sdet-framework" height="20" loading="lazy">
+        </a><a class="card repo" href="https://github.com/HrishiPurandare/pytest-api-automation-framework" target="_blank" rel="noopener">
+            <h3>pytest-api-automation-framework</h3>
+            <p>REST API tests in pytest with a reusable API client and fixtures, a Dockerised Flask mock API, and GitHub Actions CI.</p>
+            <img src="https://github.com/HrishiPurandare/pytest-api-automation-framework/actions/workflows/api-ci.yml/badge.svg" alt="Current CI status of pytest-api-automation-framework" height="20" loading="lazy">
+        </a><a class="card repo" href="https://github.com/HrishiPurandare/devops-test-automation-lab" target="_blank" rel="noopener">
+            <h3>devops-test-automation-lab</h3>
+            <p>Docker and CI lab: separate Playwright and PyTest images, docker-compose orchestration and a multi-job GitHub Actions workflow.</p>
+            <img src="https://github.com/HrishiPurandare/devops-test-automation-lab/actions/workflows/multi-job-ci.yml/badge.svg" alt="Current CI status of devops-test-automation-lab" height="20" loading="lazy">
+        </a>
+        </div>
+    </div>
+</section>
+
+<section id="credentials">
+    <div class="wrap creds">
+        <div>
+            <h2>Certifications and recognition</h2>
+            <ul class="cred-list" style="margin-top:18px"><li><strong>ISTQB Advanced Level</strong></li><li><strong>Playwright Automation Testing &amp; Framework Design</strong> <span>– Udemy</span></li><li><strong>DevOps, CI/CD Pipelines &amp; Performance Testing</strong> <span>– Udemy</span></li><li><strong>GenAI Tools and AI Agents for Software Testing</strong> <span>– Udemy</span></li><li><strong>Understanding APIs and RESTful APIs</strong> <span>– Udemy</span></li><li><strong>Generative AI Mastermind</strong> <span>– Outskill</span></li><li><strong>AI Tools and ChatGPT Workshop</strong> <span>– be10x</span></li><li><strong>Euronet Half-Yearly Recognition Award</strong> <span>– 2023 (Payment Hub Automation Delivery)</span></li></ul>
+        </div>
+        <div>
+            <h2>Education</h2>
+            <ul class="cred-list" style="margin-top:18px"><li><strong>Bachelor of Engineering, Electronics &amp; Telecommunication</strong><br><span>Savitribai Phule Pune University, India, 2019</span></li></ul>
+        </div>
+    </div>
+</section>
+</main>
+
+<section class="contact" id="contact">
+    <div class="wrap">
+        <h2>Let's talk about your quality engineering challenges.</h2>
+        <div class="contact-links">
+            <div><small>Email</small><a href="mailto:hrishikesh.purandarem@gmail.com">hrishikesh.purandarem@gmail.com</a></div>
+            <div><small>Phone</small><a href="tel:+971556193114">+971-556193114</a></div>
+            <div><small>LinkedIn</small><a href="https://www.linkedin.com/in/hrishikesh-purandare-qa" target="_blank" rel="noopener">hrishikesh-purandare-qa</a></div>
+            <div><small>Location</small>Dubai, UAE. Open to global relocation with visa sponsorship</div>
+        </div>
+    </div>
+</section>
+<script>
+      document.querySelector('.theme').addEventListener('click', function () {
+        var root = document.documentElement;
+        var dark = root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+        root.dataset.theme = dark ? 'light' : 'dark';
+        try { localStorage.setItem('theme', root.dataset.theme); } catch (e) {}
+      });
+      addEventListener('beforeprint', function () { document.querySelectorAll('details').forEach(function (d) { d.open = true; }); });
+    </script>
 </body>
 </html>
